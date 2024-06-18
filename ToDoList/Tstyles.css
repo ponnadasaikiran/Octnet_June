@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(Image.jpg);
+}
+.container{
+    background-image: url(BackGround.jpg);
+}
+.box{
+    position: relative;
+    width: 450px;
+    height: 550px;
+    border-radius: 20px;
+    padding: 30px 50px;
+    background-image: url(bgi.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: bottom,left;
+    box-shadow: 25px 25px 75px rgba(0, 0, 255, 0.1),
+    10px 10px 70px rgba(0, 0, 255, 0.1),
+    inset 5px 5px 10px rgba(0, 0, 255, 0.1),
+    inset 5px 5px 20px rgba(0, 0, 255, 0.1),
+    inset -5px -5px 20px rgba(0, 0, 255, 0.1);
+}
+h2{
+    text-align: center;
+    font-size: 35px;
+    width: 100%;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 15px;
+}
+#inputbox{
+    position: relative;
+    width:100%;
+    border-color: crimson;
+    outline: none;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 20px;
+    box-shadow: 5px 5px 7px rgba(255, 255, 255, 0.403),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.403),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.403);
+}
+.box li{
+    position: relative;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    background: #1f83f2;
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 22.5px;
+    color: white;
+    box-shadow: 5px 5px 7px rgba(255, 255, 255, 0.403),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.403),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.403);
+}
+.box li i{
+    position:absolute;
+    right: -40px;
+    width: 30px;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff2c74;
+    box-shadow: 5px 5px 7px rgba(255, 255, 255, 0.403),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.403),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.403);
+}
+.box li i::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+}
+.box li i::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: white;
+    transform: rotate(-45deg);
+}
+.box li::before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+}
+.box li.done{
+    background: #f00;
+}
+.box li.done:after{
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    transform:rotate(315deg); 
+}
+#list{
+    position: relative;
+    margin-top: 20px;
+    height: 350px;
+    overflow-y:auto;
+    padding-right: 10px;
+}
